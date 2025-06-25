@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Processor</title>
+</head>
+<body>
+  <h1>Upload Images (1200x800)</h1>
+  <form action="/process" method="post" enctype="multipart/form-data">
+    <input type="file" name="images" accept="image/*" multiple required>
+    <button type="submit">Process & Download ZIP</button>
+  </form>
+</body>
+</html>
