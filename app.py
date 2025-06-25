@@ -37,14 +37,9 @@ def process():
             img = crop_center(img, TARGET_SIZE)
 
             img_bytes = io.BytesIO()
-            img.save(
-                img_bytes,
-                format='JPEG',
-                dpi=(72, 72),
-                quality=75,      # ✅ Added
-                optimize=True    # ✅ Added
-            )
+            img.save(img_bytes, format='JPEG', dpi=(72, 72), quality=95)
             img_bytes.seek(0)
+
             zip_file.writestr(file.filename.rsplit('.', 1)[0] + '.jpg', img_bytes.read())
 
     zip_buffer.seek(0)
